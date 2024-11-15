@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="data.css">
+  <title>The Nth Room Case: Data and Information</title>
+</head>
+<body>
+  <div class="container">
+    <h1>The Nth Room Case: Data and Information</h1>
+
+    
+    <section class="media-section">
+      <h2>Case Images</h2>
+      <div class="image-gallery">
+        <img src="chat-bot.png" alt="Image 1 description" onclick="openModal(this.src)">
+        <img src="military.png" alt="Image 2 description" onclick="openModal(this.src)">
+        <img src="translated.png" alt="Image 3 description" onclick="openModal(this.src)">
+      </div>
+    </section>
+
+    
+    <div id="imageModal" class="modal">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img id="modalImage" src="" alt="Expanded Image">
+      </div>
+    </div>
+
+    <section class="media-section">
+      <h2>Relevant Videos</h2>
+      <div class="video-gallery">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_UnM2T8svDc?si=s_KsuxXeCQyAUkvO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WDRR299LobQ?si=m1AQ30u-bRQ-LzqP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+   
+    <section class="info-section">
+      <h2>Background Information</h2>
+      <p>The Nth Room case has been one of the most significant and troubling criminal cases involving deepfake technology, trafficking, and digital manipulation. The case revolves around an underground digital network where users exploited deepfake AI technology for illegal activities. The investigation uncovered disturbing trends in how the technology was used to coerce and exploit vulnerable individuals.</p>
+		<p>
+        The investigation began when law enforcement discovered the existence of a secret online platform where individuals could manipulate images and videos to exploit and blackmail others. What followed was a multi-year operation to trace the creators and perpetrators of the Nth Room network, which led to various arrests and international cooperation between law enforcement agencies.
+      </p>
+    </section>
+
+    
+    <section class="links-section">
+      <h2>Useful Links</h2>
+      <ul>
+        <li><a href="https://www.bbc.com/news/articles/cg4yerrg451o" target="_blank">Link to related article 1</a></li>
+<li><a href="https://english.hani.co.kr/arti/english_edition/e_national/971117.html" target="_blank">Link to related article 2</a></li>
+<li><a href="https://www.lowyinstitute.org/the-interpreter/nth-room-case-modern-slavery-digital-space" target="_blank">Link to related article 3</a></li>
+<li><a href="https://www.theguardian.com/world/2024/sep/13/from-spy-cams-to-deepfake-porn-fury-in-south-korea-as-women-targeted-again" target="_blank">Link to related article 4</a></li>
+
+		</ul>
+    </section>
+
+  </div>
+
+  <script>
+    
+    function openModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("imageModal").style.display = "flex";
+    }
+
+    
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>

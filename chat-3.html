@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chat-3.css">
+  <title>Chat Room 2</title>
+</head>
+<body>
+  <div class="chat-background">
+    <!-- Button to Play Sound and Redirect -->
+    <button class="screenshot-button" onclick="playScreenshotSound()">Click to take Screenshot&nbsp;</button>
+  </div>
+
+  <!-- Audio for Screenshot Sound -->
+  <audio id="screenshot-sound" src="screenshot.mp3" preload="auto"></audio>
+
+  <!-- JavaScript to Play Sound and Redirect -->
+  <script>
+    function playScreenshotSound() {
+      const screenshotSound = document.getElementById('screenshot-sound');
+      screenshotSound.play();
+
+      // Redirect to Evidence.html after audio ends
+      screenshotSound.onended = function() {
+        window.location.href = "Evidence.html";  
+      };
+    }
+  </script>
+</body>
+</html>

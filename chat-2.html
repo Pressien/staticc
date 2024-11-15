@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chat-2.css">
+  <title>Chat Room 2</title>
+</head>
+<body>
+  <div class="chat-background">                     
+    
+    <a href="chat-3.html" class="chat-link">https://deepfake-generator-bot&nbsp;</a>
+
+    
+    <button class="screenshot-button" onclick="takeScreenshot()">Click to take Screenshot&nbsp;</button>
+  </div>
+
+  
+  <audio id="screenshot-sound" src="screenshot.mp3" preload="auto"></audio>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    function takeScreenshot() {
+      const screenshotSound = document.getElementById('screenshot-sound');
+      screenshotSound.play();
+
+      
+      screenshotSound.onended = () => {
+        html2canvas(document.body).then(canvas => {
+          
+          canvas.toBlob(blob => {
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'screenshot.png';
+            link.click();
+
+            
+            URL.revokeObjectURL(link.href);
+
+            
+            window.location.href = 'Evidence.html'; 
+          });
+        }).catch(error => {
+          console.error("Screenshot capture failed: ", error);
+        });
+      };
+    }
+  </script>
+</body>
+</html>
